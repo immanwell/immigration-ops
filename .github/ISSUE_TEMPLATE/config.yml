@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or idea
+    url: https://github.com/immanwell/immigration-ops/discussions
+    about: Ask a question, share an idea or comment on the design in Discussions.
+  - name: Something that could expose a user's data
+    url: https://github.com/immanwell/immigration-ops/security/advisories/new
+    about: Report it privately. Please do not open a public issue.

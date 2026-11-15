@@ -1,0 +1,42 @@
+name: Bug
+description: The tool breaks, or computes something that does not match its own data.
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If a rule itself is wrong or out of date, use the "Rule is wrong or out of date" form instead.
+        **Never paste your real profile.** Reduce the problem to a fictional profile that reproduces it.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: The command or mode you ran, and a fictional profile that shows the problem.
+      render: shell
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The release tag or commit you are on.
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      placeholder: "Node 22, Ubuntu 24.04, Claude Code"
