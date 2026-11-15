@@ -1,0 +1,56 @@
+name: Route request
+description: Ask for a migration route to be covered, or offer to build its pack.
+title: "route(<country>): "
+labels: ["route-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Official links matter most. A route with good official sources gets built much sooner.
+  - type: input
+    id: country
+    attributes:
+      label: Country
+    validations:
+      required: true
+  - type: input
+    id: route
+    attributes:
+      label: Route name
+      description: The official name of the visa, permit or programme.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of route
+      options:
+        - Points-based
+        - Employer-sponsored work permit
+        - Job-search stay
+        - Vocational training
+        - Regional or provincial nomination
+        - Lottery
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official sources
+      description: Government pages for eligibility, points, fees, documents and processing times. One link per line.
+    validations:
+      required: true
+  - type: textarea
+    id: who
+    attributes:
+      label: Who is it for
+      description: In one or two sentences, who usually uses this route.
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Can you help
+      options:
+        - label: I can build this pack
+        - label: I can review it because I know this route
+        - label: I would maintain this country's packs

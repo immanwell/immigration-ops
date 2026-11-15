@@ -1,0 +1,11 @@
+# Who reviews what. Country maintainers are added here when they take on a pack.
+# See GOVERNANCE.md.
+
+*                 @immanwell
+
+# Route packs by country
+/routes/ca/       @immanwell
+/routes/de/       @immanwell
+
+# Origin packs
+/origins/ug/      @immanwell

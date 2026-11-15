@@ -1,0 +1,33 @@
+{
+  "name": "immigration-ops",
+  "version": "0.0.1",
+  "description": "Find the migration route that fits your real profile, with every number sourced and dated.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "author": "Em (https://em.is-a.dev)",
+  "homepage": "https://github.com/immanwell/immigration-ops#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/immanwell/immigration-ops.git"
+  },
+  "bugs": {
+    "url": "https://github.com/immanwell/immigration-ops/issues"
+  },
+  "keywords": [
+    "immigration",
+    "migration",
+    "visa",
+    "express-entry",
+    "blue-card",
+    "career-ops",
+    "claude-code",
+    "local-first"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

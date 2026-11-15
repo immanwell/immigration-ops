@@ -1,0 +1,51 @@
+name: Rule is wrong or out of date
+description: A threshold, points value, fee, timeline or requirement no longer matches the official source.
+title: "data(<country>/<route>): "
+labels: ["data", "rule-update"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you. This is the most valuable kind of report. Please do not include personal details.
+  - type: input
+    id: pack
+    attributes:
+      label: Country and route
+      placeholder: "Canada, Express Entry (Federal Skilled Worker)"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is wrong
+      description: What the project says now, and what it should say.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official source
+      description: A link to the government page that states the correct value.
+      placeholder: "https://"
+    validations:
+      required: true
+  - type: textarea
+    id: quote
+    attributes:
+      label: Text from the official page
+      description: Copy the sentence or table row that states the value.
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date you checked the page
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Fix
+      options:
+        - label: I can open a pull request for this

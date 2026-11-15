@@ -1,0 +1,41 @@
+name: Origin pack
+description: Describe the starting line for applicants from your country, or offer to write its pack.
+title: "origin(<country>): "
+labels: ["origin-pack"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        An origin pack covers what applying from one country involves: where applications are handled, how degrees are recognised, how documents are legalised, where tests can be sat. Share what you know. Do not include personal or case details.
+  - type: input
+    id: country
+    attributes:
+      label: Country you applied from
+    validations:
+      required: true
+  - type: textarea
+    id: destinations
+    attributes:
+      label: Destinations you know about
+      description: Which destination countries you have applied to, or researched closely, from this country.
+    validations:
+      required: true
+  - type: textarea
+    id: know
+    attributes:
+      label: What you can describe
+      description: For example the embassy or visa centre that handles applications, credential recognition, legalisation steps, police certificates, test centres, typical waiting times.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Official sources
+      description: Embassy, ministry or official visa centre pages. One link per line.
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Can you help
+      options:
+        - label: I can write this pack
+        - label: I would maintain it
