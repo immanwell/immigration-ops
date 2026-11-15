@@ -57,7 +57,8 @@ onboard ──► config/profile.yml ──► assess (engine, every active rout
 - `npm run validate` (v0.1.0): every pack passes its schema, cites an official source for
   every value, and matches its hand-worked test personas.
 - CI runs both on every pull request, checks internal links, and checks the pull request title.
-- A scheduled job (v0.4.0) opens an issue for each pack past its review date.
+- Scheduled jobs (v0.4.0) watch official sources and announcement feeds, and open an issue
+  when a page changes, a notice is published or a pack passes its review date.
 
 ## Where to start reading
 

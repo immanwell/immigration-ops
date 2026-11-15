@@ -44,7 +44,7 @@ arithmetic in tested code, and is honest about what it does not know.
 | **Unknown is an answer** | A test you have not sat yet is shown as an assumption, with what happens if the result comes in lower. A missing fact is never a silent guess. |
 | **Levers and clocks** | See what moves your result (a language level, a degree, a nomination) and what time does to it (a birthday, an expiring test, a rule's end date). |
 | **Routes and origins** | Route packs describe the destination. Origin packs describe your starting line: embassy, degree recognition, document legalisation, test centres. |
-| **Stale rules are flagged** | Every pack has a review date. Automated checks open an issue when one passes, and reports say when a rule has not been verified recently. |
+| **Changes are caught** | Official pages and announcement feeds are watched on a schedule. A changed page or a new notice opens an issue the same day, and reports say when a rule has not been re-verified. A number only ever changes through a reviewed pull request. |
 | **Private by design** | Everything runs on your machine. Your profile and documents are separated from the tool by a written data contract and ignored by git. |
 
 ## What it will look like
@@ -75,7 +75,7 @@ Sources checked between 2026-12-01 and 2027-01-05. Information, not advice.
 | First route: Canada, Express Entry (Federal Skilled Worker) | Planned for v0.1.0 |
 | Canada and Germany packs, route matrix | v0.2.0 |
 | Plan, documents and tracker modes, first origin pack | v0.3.0 |
-| Freshness automation, sponsor and scam checks | v0.4.0 |
+| Source and announcement watch, sponsor and scam checks | v0.4.0 |
 | career-ops bridge | v0.5.0 |
 
 The full list, including the countries planned after Canada and Germany, is in

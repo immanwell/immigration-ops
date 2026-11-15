@@ -12,7 +12,7 @@ alongside a real move, and a correct rule matters more than a deadline.
 | 2 | **First route end to end** | A person with a filled profile gets a tested, source-cited Express Entry (Federal Skilled Worker) assessment from one script: eligibility, points, levers and clocks. The `onboard` and `route` modes work on it. | v0.1.0 |
 | 3 | **Canada and Germany packs** | `assess` produces a route matrix across at least eight routes in two countries, including a nomination route and Germany's main work, job-search and vocational routes. | v0.2.0 |
 | 4 | **From assessment to action** | `plan`, `documents` and `tracker` work, the first origin pack (Uganda) exists, and costs show in the user's own currency. | v0.3.0 |
-| 5 | **Trust layer** | Scheduled freshness checks open issues for overdue packs, `verify` drafts data pull requests, and `sponsor-check` and `scam-check` work against official public registers. | v0.4.0 |
+| 5 | **Trust layer** | Scheduled jobs watch official sources and announcement feeds and open an issue when a page changes, a notice is published or a review date passes. `verify` drafts data pull requests, and `sponsor-check` and `scam-check` work against official public registers. | v0.4.0 |
 | 6 | **career-ops bridge** | Profile import, route-filter export, and `job-check` for a posting or offer. | v0.5.0 |
 | 7 | **Launch** | The README has a recorded demo, there is a public write-up, the contributor guides have been proven by an outside contribution, and Australia and United Kingdom packs are open as "help wanted". | v0.6.0 |
 

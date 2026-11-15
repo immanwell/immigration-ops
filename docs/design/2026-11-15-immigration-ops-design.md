@@ -137,7 +137,7 @@ authority: IRCC
 kind: points-draw            # points-draw | points-threshold | employer-sponsored |
                              # job-seeker | vocational | nomination | lottery
 leads_to: { status: permanent-residence, on_grant: true }
-status: active               # active | paused | closed
+status: active               # active | pilot | paused | closed
 verified: 2026-11-20         # last full review of this file
 review_by: 2027-02-20        # CI warns after this date
 
@@ -245,6 +245,32 @@ career-ops does it.
   expected result moves. The PR template asks for the quoted official text.
 - `verify` mode gives maintainers and users a repeatable way to do that review.
 
+### 6.6.1 Catching changes
+
+Immigration rules change by announcement, often with little notice, and a review date alone
+would miss a change made the day after a review. Three layers catch changes, and one rule
+governs what happens next.
+
+1. **Source watch.** Each source records a fingerprint of the cited section of the official
+   page. A scheduled job re-reads every source and opens an issue the day a page changes. Until
+   a person reviews it, results from that pack are marked "source changed since verification".
+2. **Announcement watch.** Each `country.yml` lists the official news feeds of that country's
+   immigration authority. A scheduled job opens one triage issue per new notice. Triage ends in
+   one of: a rule update, a new route, a status change (a pilot made permanent, a route paused
+   or closed), or "out of scope".
+3. **At the moment of use.** When a mode starts it checks whether the local copy is behind the
+   latest release and says which rule changes since then touch the routes the person is
+   pursuing. `verify` can re-read the official sources for one route on demand, in the session.
+
+**The rule:** detection is automatic and fast, but a number only changes through a reviewed
+pull request with the official text quoted. The tool never rewrites a rule from a live page
+on its own, because that would bring back the unverified, AI-read number this project exists
+to avoid. When it sees a change it cannot yet confirm, it says so and links the official page.
+
+To make status changes expressible, a route's `status` is one of `active`, `pilot`, `paused`
+or `closed`, and a route or any single rule may carry `effective_from` and `effective_until`
+dates, which the clocks then pick up.
+
 ### 6.7 career-ops bridge
 
 Optional, and only ever touches career-ops user-layer files.
@@ -337,8 +363,9 @@ Each is stated as what will be true when it is done.
    job-seeker and vocational routes.
 4. **From assessment to action (v0.3.0).** `plan`, `documents` and `tracker` work, the first
    origin pack (Uganda) exists, and costs show in the user's own currency.
-5. **Trust layer (v0.4.0).** Scheduled freshness checks open issues, `verify` drafts data PRs,
-   and `sponsor-check` and `scam-check` work against official registers.
+5. **Trust layer (v0.4.0).** Scheduled jobs watch official sources and announcement feeds and
+   open issues when something changes or a review date passes, `verify` drafts data PRs, and
+   `sponsor-check` and `scam-check` work against official registers.
 6. **career-ops bridge (v0.5.0).** Profile import, route-filter export, and `job-check`.
 7. **Launch.** A README with a recorded demo, a write-up, contributor guides proven by an
    outside contribution, and Australia and UK packs open as "help wanted".
