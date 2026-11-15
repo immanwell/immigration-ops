@@ -1,0 +1,16 @@
+# Private planning notes, never published
+*-handoff.md
+.private/
+
+# User layer. See DATA_CONTRACT.md. Do not remove these rules in a public fork.
+/config/profile.yml
+/data/
+/reports/
+/documents/
+/modes/_custom.md
+
+# Tooling
+node_modules/
+.superpowers/
+.DS_Store
+*.log
