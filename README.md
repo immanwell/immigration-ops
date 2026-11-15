@@ -106,12 +106,12 @@ immigration-ops is an independent project. It is not affiliated with or endorsed
 
 You do not need to write code to help, and you do not need to wait for v0.1.0.
 
-- **Tell us about a route.** Open a [route request](../../issues/new/choose) with the official
+- **Tell us about a route.** Open a [route request](https://github.com/immanwell/immigration-ops/issues/new/choose) with the official
   government links. Official sources are the most valuable thing you can bring.
 - **Describe your starting line.** If you have been through an application from your country,
   an origin pack is mostly what you already know.
 - **Challenge the design.** The [design document](docs/design/2026-11-15-immigration-ops-design.md)
-  is open for comment in [Discussions](../../discussions).
+  is open for comment in [Discussions](https://github.com/immanwell/immigration-ops/discussions).
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md) first. It explains the one rule that matters most here:
 no number enters this repository without an official source.
